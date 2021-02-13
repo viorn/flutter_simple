@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:socfr/common/handler.dart';
 import 'package:socfr/handlers/counter_handler.dart';
 import 'package:socfr/states/counter_state.dart';
-import 'package:socfr/common/base_widget.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);

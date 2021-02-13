@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:socfr/view/pages/auth_page.dart';
-import 'package:socfr/view/pages/counter_page.dart';
 import 'package:socfr/handlers/counter_handler.dart';
 
 void main() {
@@ -20,6 +19,12 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {'/': (context) => AuthPageWidget()},
+      builder: (context, child) {
+        return MediaQuery(
+          child: child,
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+        );
+      },
     );
   }
 }
