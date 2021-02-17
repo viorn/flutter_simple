@@ -28,7 +28,9 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
             SizedBox(height: context.adp(14)),
             ButtonWidget(
               text: "Login",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.popAndPushNamed(context, "/counter");
+              },
             ),
             Spacer(flex: 3)
           ],

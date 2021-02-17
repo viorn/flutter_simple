@@ -1,13 +1,9 @@
 import 'dart:convert';
 
-import 'package:socfr/common/store.dart';
-
 class CounterState {
-  static Store<CounterState> store = Store(CounterState(counter: 0));
-
-  int counter;
+  final int counter;
   CounterState({
-    this.counter,
+    this.counter = 0,
   });
 
   CounterState copyWith({
@@ -38,7 +34,7 @@ class CounterState {
       CounterState.fromMap(json.decode(source));
 
   @override
-  String toString() => 'MainState(counter: $counter)';
+  String toString() => 'CounterState(counter: $counter)';
 
   @override
   bool operator ==(Object o) {
