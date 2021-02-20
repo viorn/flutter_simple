@@ -3,21 +3,29 @@ import 'dart:convert';
 class AuthPageState {
   final String loginError;
   final String passwordError;
+  final String login;
+  final String password;
   final bool authButtonIsActive;
   AuthPageState({
     this.loginError,
     this.passwordError,
+    this.login,
+    this.password,
     this.authButtonIsActive = false,
   });
 
   AuthPageState copyWith({
     String loginError,
     String passwordError,
+    String login,
+    String password,
     bool authButtonIsActive,
   }) {
     return AuthPageState(
       loginError: loginError ?? this.loginError,
       passwordError: passwordError ?? this.passwordError,
+      login: login ?? this.login,
+      password: password ?? this.password,
       authButtonIsActive: authButtonIsActive ?? this.authButtonIsActive,
     );
   }
@@ -26,6 +34,8 @@ class AuthPageState {
     return {
       'loginError': loginError,
       'passwordError': passwordError,
+      'login': login,
+      'password': password,
       'authButtonIsActive': authButtonIsActive,
     };
   }
@@ -36,6 +46,8 @@ class AuthPageState {
     return AuthPageState(
       loginError: map['loginError'],
       passwordError: map['passwordError'],
+      login: map['login'],
+      password: map['password'],
       authButtonIsActive: map['authButtonIsActive'],
     );
   }
@@ -46,8 +58,9 @@ class AuthPageState {
       AuthPageState.fromMap(json.decode(source));
 
   @override
-  String toString() =>
-      'AuthPageState(loginError: $loginError, passwordError: $passwordError, authButtonIsActive: $authButtonIsActive)';
+  String toString() {
+    return 'AuthPageState(loginError: $loginError, passwordError: $passwordError, login: $login, password: $password, authButtonIsActive: $authButtonIsActive)';
+  }
 
   @override
   bool operator ==(Object o) {
@@ -56,12 +69,17 @@ class AuthPageState {
     return o is AuthPageState &&
         o.loginError == loginError &&
         o.passwordError == passwordError &&
+        o.login == login &&
+        o.password == password &&
         o.authButtonIsActive == authButtonIsActive;
   }
 
   @override
-  int get hashCode =>
-      loginError.hashCode ^
-      passwordError.hashCode ^
-      authButtonIsActive.hashCode;
+  int get hashCode {
+    return loginError.hashCode ^
+        passwordError.hashCode ^
+        login.hashCode ^
+        password.hashCode ^
+        authButtonIsActive.hashCode;
+  }
 }
