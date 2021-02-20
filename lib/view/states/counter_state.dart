@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 class CounterState {
-  final int counter;
+  int counter;
   CounterState({
-    this.counter = 0,
+    this.counter,
   });
 
   CounterState copyWith({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:socfr/common/base_widget.dart';
+import 'package:socfr/view/common/base_widget.dart';
 
 class InputTextWidget extends StatelessWidget {
   final String hint;

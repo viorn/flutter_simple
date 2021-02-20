@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:socfr/common/base_widget.dart';
+import 'package:socfr/view/common/base_widget.dart';
 
 class ButtonWidget extends StatelessWidget {
   final Color bgColor;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:socfr/view/widgets/button_widget.dart';
-import 'package:socfr/common/base_widget.dart';
+import 'package:socfr/view/common/base_widget.dart';
 import 'package:socfr/view/widgets/input_widdget.dart';
 
 class AuthPageWidget extends StatefulWidget {

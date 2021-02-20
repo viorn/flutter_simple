@@ -1,7 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_redux/flutter_redux.dart';
-import 'package:socfr/reducers/add_counter_reducer.dart';
-import 'package:socfr/states/app_state.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:socfr/view/pages/counter/cubit/counter_cubit.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title = 'Counter'}) : super(key: key);
@@ -26,12 +27,12 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'You have pushed the button this many times:',
             ),
-            StoreConnector<AppState, int>(
-              distinct: true,
-              converter: (store) => store.state.counterPage.counter,
-              builder: (context, vm) {
+            BlocBuilder<CounterCubit, CounterState>(
+              buildWhen: (previous, current) =>
+                  previous.counter != current.counter,
+              builder: (context, state) {
                 return Text(
-                  "$vm",
+                  "${state.counter}",
                   style: Theme.of(context).textTheme.headline4,
                 );
               },
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          StoreProvider.of<AppState>(context).dispatch(CounterPlusAction());
+          BlocProvider.of<CounterCubit>(context).plus();
         },
         tooltip: 'Increment',
         child: Icon(Icons.add),

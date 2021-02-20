@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.2"
+  bloc:
+    dependency: transitive
+    description:
+      name: bloc
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.1.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -50,13 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.1"
-  crypto:
-    dependency: transitive
-    description:
-      name: crypto
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.5"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -76,20 +76,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_flipperkit:
+  flutter_bloc:
     dependency: "direct main"
     description:
-      name: flutter_flipperkit
+      name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.24"
-  flutter_redux:
-    dependency: "direct main"
-    description:
-      name: flutter_redux
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.7.0"
+    version: "6.1.2"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -123,6 +116,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4"
   path:
     dependency: transitive
     description:
@@ -151,13 +151,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.4"
-  redux:
+  provider:
     dependency: transitive
     description:
-      name: redux
+      name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.0.0+3"
+    version: "4.3.3"
   rxdart:
     dependency: "direct main"
     description:
@@ -219,13 +219,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
-  uuid:
-    dependency: transitive
-    description:
-      name: uuid
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.2.2"
   vector_math:
     dependency: transitive
     description:
@@ -242,4 +235,4 @@ packages:
     version: "4.5.1"
 sdks:
   dart: ">=2.9.0-14.0.dev <3.0.0"
-  flutter: ">=1.20.0 <2.0.0"
+  flutter: ">=1.18.0-6.0.pre <2.0.0"
