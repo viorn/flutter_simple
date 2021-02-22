@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:socfr/view/pages/auth_page.dart';
+import 'package:socfr/view/pages/auth/auth_page.dart';
 import 'package:socfr/view/pages/counter/counter_page.dart';
 import 'package:socfr/view/pages/counter/cubit/counter_cubit.dart';
 

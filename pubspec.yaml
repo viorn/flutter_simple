@@ -33,6 +33,7 @@ dependencies:
   mutex: ^1.1.0
   flutter_svg: ^0.18.1
   flutter_bloc: ^6.1.2
+  http: ^0.12.2
 
 dev_dependencies:
   flutter_test:
